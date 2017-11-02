@@ -15,9 +15,8 @@ class Days extends Component {
     var firstDayInMonth = this.firstDayInMonth(this.props.year, this.props.month);
     var day = 1;
     var allDays = []; //Final array to push
-    //Asked for 5 rows, but some months (like December of this year!) have 6 rows
     for (var i = 0; i < 6; i++) {
-      var weeksArray = []; //An array for each week
+      var weeksArray = [];
       for (var j = 0; j < 7; j++) {
         if ((i === 0 && j < firstDayInMonth) || day > amountDays) {
           weeksArray.push(<div className="day-box"> </div>); //Empty box
